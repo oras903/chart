@@ -1,7 +1,7 @@
 <template>
 <div>
 <div>
-<button v-on:click="refreshCharts()">ˢ��</button>
+<button v-on:click="refreshCharts()">刷新</button>
 <div class="line" id="line"></div>
 </div>
 </div>
