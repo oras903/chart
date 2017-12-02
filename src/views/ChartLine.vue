@@ -67,15 +67,7 @@ export default {
   mounted () {
     this.myChart = echarts.init(document.getElementById('line'))
     this.myChart.setOption(this.opt) //
-    const res = axios.get('http://112.64.32.191:8899/v1/line')
-    this.myChart.setOption({
-      xAxis: {
-        data: res.data.legend_data
-      },
-      series: {
-        data: res.data.xAxis_data
-      }
-    })
+    return {refreshCharts()}
     window.addEventListener('resize', this.myChart.resize)
   }
 }
