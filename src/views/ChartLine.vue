@@ -67,7 +67,16 @@ export default {
   mounted () {
     this.myChart = echarts.init(document.getElementById('line'))
     this.myChart.setOption(this.opt) //
-    window.addEventListener('resize', this.myChart.resize) // ×ÊӦ
+    const res = await axios.get('http://112.64.32.191:8899/v1/line')
+    this.myChart.setOption({
+      xAxis: {
+        data: res.data.legend_data
+      },
+      series: {
+        data: res.data.xAxis_data
+      }
+    })
+    window.addEventListener('resize', this.myChart.resize)
   }
 }
 </script>
