@@ -67,7 +67,7 @@ export default {
   mounted () {
     this.myChart = echarts.init(document.getElementById('line'))
     this.myChart.setOption(this.opt) //
-    return {refreshCharts()}
+    this.refreshCharts()
     window.addEventListener('resize', this.myChart.resize)
   }
 }
