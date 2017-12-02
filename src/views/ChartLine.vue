@@ -1,7 +1,7 @@
 <template>
 <div>
 <div>
-<button v-on:click="refreshCharts()">Ë¢ĞÂ</button>
+<button v-on:click="refreshCharts()">Ë¢ï¿½ï¿½</button>
 <div class="line" id="line"></div>
 </div>
 </div>
@@ -17,13 +17,13 @@ export default {
     opt () {
       return {
         title: {
-          text: '¶ÑµşÇøÓòÍ¼'
+          text: 'å †å åŒºåŸŸå›¾'
         },
         tooltip: {
           trigger: 'axis'
         },
         legend: {
-          data: ['youjianyingxiao']
+          data: ['é‚®ä»¶è¥é”€']
         },
         grid: {
           left: '3%',
@@ -41,7 +41,7 @@ export default {
         }],
         series: [
           {
-            name: 'ÓÊ¼şÓªÏú',
+            name: 'é‚®ä»¶è¥é”€',
             type: 'line',
             data: []
           }
