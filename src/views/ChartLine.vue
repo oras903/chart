@@ -70,7 +70,6 @@ export default {
     this.refreshCharts()
     window.addEventListener('resize', this.myChart.resize)
   }
-  
 }
 </script>
 
